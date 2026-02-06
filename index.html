@@ -99,23 +99,17 @@
     }
 
     .bg-pattern {
-      /* Update to correct local path */
-      background-image: url('/psicologa-andrea-macagnani/assets/f4-Ce-Eiv-3.png');
-      background-repeat: repeat;
-      background-size: 512px;
-      /* Default for mobile */
-      background-attachment: scroll;
-      /* Better performance on mobile */
-    }
-
-    @media (min-width: 1024px) {
-      .bg-pattern {
-        background-size: auto;
-        background-attachment: fixed;
-      }
+      background-color: #f5f5f9;
+      /* Fallback solid color */
+      background-image:
+        radial-gradient(at 0% 0%, hsla(253, 16%, 72%, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(339, 49%, 95%, 1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(339, 49%, 95%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(253, 16%, 72%, 0.1) 0px, transparent 50%);
+      /* Remove heavy image patterns */
     }
   </style>
-  <script type="module" crossorigin src="/psicologa-andrea-macagnani/assets/index-KnzEf46-.js"></script>
+  <script type="module" crossorigin src="/psicologa-andrea-macagnani/assets/index-BEWb5VNF.js"></script>
 </head>
 
 <body>
