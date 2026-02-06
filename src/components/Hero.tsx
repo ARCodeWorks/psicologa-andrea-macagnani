@@ -114,7 +114,7 @@ const Hero: React.FC<HeroProps> = ({ setActiveSection, isClickScrolling, handleN
           <div className="relative w-full lg:w-6/12 flex justify-center lg:justify-end order-1 lg:order-2 mt-20 lg:mt-0">
             <div className="relative w-full max-w-[16rem] sm:max-w-xs lg:max-w-lg">
               <div className="p-1.5 bg-gradient-to-br from-primary via-secondary to-accent mx-auto w-64 h-64 lg:w-full lg:h-[34rem] rounded-full lg:rounded-2xl shadow-2xl transition-transform duration-500 md:hover:scale-105">
-                <img src="https://raw.githubusercontent.com/NullCipherr/psi-andrea-macagnani/refs/heads/main/assets/images/Image_001.jpeg" alt="Andréa Macagnani - Psicóloga" className="object-cover w-full h-full rounded-full lg:rounded-2xl" decoding="async" />
+                <img src={`${import.meta.env.BASE_URL}images/Image_001.jpeg`} alt="Andréa Macagnani - Psicóloga" className="object-cover w-full h-full rounded-full lg:rounded-2xl" decoding="async" />
               </div>
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-3 px-4 py-2 bg-white/90 rounded-full shadow-lg backdrop-blur-sm whitespace-nowrap">
                 <HeartIcon className="text-xl text-primary" />

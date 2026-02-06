@@ -133,7 +133,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection, isClic
       <header className={`font-poppins fixed top-0 left-0 z-50 w-full transition-all duration-300 ${headerBgClass} h-16`}>
         <div className="container flex items-center justify-between h-full px-4 mx-auto max-w-7xl">
           <a href="#home" onClick={handleHeaderNavClick} className="flex items-center gap-4">
-            <img src="https://raw.githubusercontent.com/NullCipherr/psi-andrea-macagnani/refs/heads/main/assets/css/logo.png" alt="Logo" className="w-16 h-auto" />
+            <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Logo" className="w-16 h-auto" />
             <div>
               <h1 className="font-bold text-[clamp(1.1rem,4vw,1.25rem)]">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
