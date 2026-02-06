@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
       id="contato"
       className="relative flex flex-col items-center justify-center min-h-screen pt-24 pb-24 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-pink-50/90 to-white backdrop-blur-sm z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-pink-50/50 to-white z-0"></div>
       <div className={`relative z-10 container px-4 mx-auto max-w-7xl transition-[opacity,transform] duration-1000 ease-out ${isSectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <SectionTitle
           icon={<EnvelopeIcon />}
@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
             {/* Right Column: Image */}
             <div className="relative hidden w-full h-auto lg:block">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Maring%C3%A1_City.jpg"
+                src={`${import.meta.env.BASE_URL}images/Maringá_City.jpg`}
                 alt="Ambiente de consultório de psicologia, simbolizando um espaço para contato"
                 className="object-cover w-full h-full"
                 decoding="async"

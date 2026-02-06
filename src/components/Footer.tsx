@@ -19,11 +19,11 @@ const FooterLink: React.FC<FooterLinkProps> = ({ href, children, onClick }) => (
 
 // Componente para ícones sociais para um visual consistente
 const SocialIcon: React.FC<{ href: string; 'aria-label': string; icon: React.ReactNode }> = ({ href, 'aria-label': ariaLabel, icon }) => (
-  <a 
-    href={href} 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    aria-label={ariaLabel} 
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={ariaLabel}
     className="flex items-center justify-center w-10 h-10 text-xl rounded-full bg-gray-dark/20 text-gray-300 transition-[transform,color,background-color] duration-300 hover:bg-gradient-to-br hover:from-primary hover:to-accent hover:text-white hover:scale-110"
   >
     {icon}
@@ -39,11 +39,11 @@ const Footer: React.FC<FooterProps> = ({ handleNavClick }) => { // Recebe handle
     <footer className="bg-secondary text-gray-200 font-roboto">
       <div className="container px-4 py-16 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          
+
           {/* Coluna de Branding */}
           <div className="lg:col-span-5">
             <div className="flex items-center gap-4 mb-6">
-              <img src="https://raw.githubusercontent.com/NullCipherr/psi-andrea-macagnani/refs/heads/main/assets/css/logo.png" alt="Logo Andréa Macagnani" className="w-16 h-16" />
+              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Logo Andréa Macagnani" className="w-16 h-16" />
               <div>
                 <h3 className="text-xl font-bold text-white font-poppins">Andréa Macagnani</h3>
                 <p className="text-gray-300">Psicóloga Clínica • CRP-08/09949</p>
@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = ({ handleNavClick }) => { // Recebe handle
               <SocialIcon href="mailto:andrea.macagnani@gmail.com" aria-label="E-mail" icon={<EnvelopeIcon />} />
             </div>
           </div>
-          
+
           {/* Colunas de Links e Contato */}
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-3">
             <div>
@@ -91,11 +91,11 @@ const Footer: React.FC<FooterProps> = ({ handleNavClick }) => { // Recebe handle
                   </div>
                 </li>
                 <li className="flex items-center gap-3">
-                  <PhoneIcon className="flex-shrink-0 text-lg text-primary" /> 
+                  <PhoneIcon className="flex-shrink-0 text-lg text-primary" />
                   <a href="https://wa.me/5544988613000" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">(44) 98861-3000</a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <ClockIcon className="flex-shrink-0 mt-1 text-lg text-primary" /> 
+                  <ClockIcon className="flex-shrink-0 mt-1 text-lg text-primary" />
                   <span>Seg-Mex: 8h às 17h</span>
                 </li>
               </ul>

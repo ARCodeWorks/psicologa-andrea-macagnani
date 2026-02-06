@@ -105,7 +105,7 @@ const Hero: React.FC<HeroProps> = ({ setActiveSection, isClickScrolling, handleN
       id="home"
       className="relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-pink-50/90 to-white backdrop-blur-sm z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-pink-50/50 to-white z-0"></div>
 
       <div className={`relative z-10 container px-4 mx-auto max-w-7xl transition-[opacity,transform] duration-1000 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
 
