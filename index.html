@@ -102,13 +102,16 @@
       /* Update to correct local path */
       background-image: url('./images/f4.png');
       background-repeat: repeat;
-      background-size: auto;
-      background-attachment: fixed;
+      background-size: 512px;
+      /* Default for mobile */
+      background-attachment: scroll;
+      /* Better performance on mobile */
     }
 
-    @media (max-width: 1023px) {
+    @media (min-width: 1024px) {
       .bg-pattern {
-        background-size: 512px;
+        background-size: auto;
+        background-attachment: fixed;
       }
     }
   </style>

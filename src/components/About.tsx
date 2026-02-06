@@ -17,8 +17,10 @@ const AnimatedCard: React.FC<{ children: React.ReactNode; delay?: number }> = ({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Atualiza o estado de visibilidade baseado se o elemento está na tela ou não
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (ref.current) observer.unobserve(ref.current);
+        }
       },
       {
         threshold: 0.1, // Aciona quando 10% do card está visível
@@ -57,7 +59,10 @@ const About: React.FC = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsSectionVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsSectionVisible(true);
+          if (sectionRef.current) observer.unobserve(sectionRef.current);
+        }
       },
       { threshold: 0.15 }
     );

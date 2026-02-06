@@ -45,7 +45,10 @@ const AnimatedServiceCard: React.FC<{ children: React.ReactNode; delay: number }
     }
 
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        if (ref.current) observer.unobserve(ref.current);
+      }
     }, { threshold: 0.1 });
 
     const currentRef = ref.current;
@@ -81,7 +84,10 @@ const Services: React.FC = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsSectionVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsSectionVisible(true);
+          if (sectionRef.current) observer.unobserve(sectionRef.current);
+        }
       },
       { threshold: 0.1 }
     );

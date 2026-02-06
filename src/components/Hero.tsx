@@ -60,7 +60,11 @@ const Hero: React.FC<HeroProps> = ({ setActiveSection, isClickScrolling, handleN
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // Stop observing once visible to prevent re-triggering
+          if (sectionRef.current) observer.unobserve(sectionRef.current);
+        }
       },
       { threshold: 0.1 }
     );
