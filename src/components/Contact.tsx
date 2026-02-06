@@ -33,7 +33,10 @@ const Contact: React.FC = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsSectionVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsSectionVisible(true);
+          if (sectionRef.current) observer.unobserve(sectionRef.current);
+        }
       },
       { threshold: 0.15 }
     );
