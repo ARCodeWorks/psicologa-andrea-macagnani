@@ -96,7 +96,7 @@ const Footer: React.FC<FooterProps> = ({ handleNavClick }) => { // Recebe handle
                 </li>
                 <li className="flex items-start gap-3">
                   <ClockIcon className="flex-shrink-0 mt-1 text-lg text-primary" />
-                  <span>Seg-Mex: 8h às 17h</span>
+                  <span>Seg-Sex: 08h às 17h</span>
                 </li>
               </ul>
             </div>
