@@ -15,7 +15,7 @@ const HighlightItem: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 );
 
 const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; text: string }> = ({ icon, title, text }) => (
-  <div className="p-4 text-center bg-white rounded-lg shadow-lg transition-transform duration-300 md:hover:-translate-y-1 md:hover:shadow-xl sm:p-6 md:p-8 will-change-transform">
+  <div className="py-8 px-4 text-center bg-white rounded-lg shadow-lg transition-transform duration-300 md:hover:-translate-y-1 md:hover:shadow-xl sm:p-6 md:p-8 bill-change-transform">
     <div className="inline-flex items-center justify-center w-12 h-12 mx-auto mb-2 text-2xl rounded-full sm:w-16 sm:h-16 sm:mb-4 sm:text-3xl md:w-20 md:h-20 md:mb-6 md:text-4xl bg-gradient-to-br from-primary/10 to-secondary/10 text-primary">
       {icon}
     </div>
